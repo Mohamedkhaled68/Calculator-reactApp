@@ -7,10 +7,10 @@
 
 body{
   font-family: 'Poppins', sans-serif;
-  background: #41295a;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #7474BF;  
+  background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  
+  background: linear-gradient(to right, #348AC7, #7474BF); 
+  
 }
 
 button{
@@ -23,6 +23,7 @@ button{
   font-weight: 500;
   background-color: transparent;
   color: #fff;
+  border-radius: 2px;
   transition: 0.4s;
 }
 
@@ -42,10 +43,10 @@ button:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #654E92;
+  background-color: #3C486B;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0px 0px 6px #ffffff5b;
+  box-shadow: 0px 0px 50px #1818186f;
 }
 
 .display{
@@ -62,9 +63,13 @@ button:hover{
 
 .operators{
   width: 100%;
-  background-color: #3A1078;
+  background-color: #F9D949;
   display: flex;
   align-items: center;
+}
+
+.operators button{
+  color: #222;
 }
 
 .operators button{
@@ -79,4 +84,24 @@ button:hover{
   padding: 18px 10px;
   flex-basis: 30%;
   flex-grow: 1;
+}
+
+@media (max-width : 400px){
+  .display{
+    font-size: 30px;
+  }
+
+  .display span{
+    font-size: 16px;
+  }
+
+  button{
+    padding: 15px 10px;
+    font-size: 20px;
+  }
+
+
+  .degitis button{
+    padding: 18px 7px;
+  }
 }

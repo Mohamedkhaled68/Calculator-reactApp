@@ -4,8 +4,34 @@ function App() {
   const [calc, setcalc] = useState('')
   const [result, setresult] = useState('')
 
+  const ops = ['*', '-', '+', '/', '.']
+
   const updateCalc = value => {
-    return setcalc(calc + value)
+    if(
+      ops.includes(value) && calc == '' ||
+      ops.includes(value) && ops.includes(calc.slice(-1))
+    ){
+      return;
+    }
+
+    setcalc(calc + value)
+
+    if(!ops.includes(value)){
+      setresult(eval(calc + value).toString())
+    }
+  }
+
+  const delLast = () => {
+    if(calc == ''){
+      return;
+    }
+    const value = calc.slice(0, -1)
+    setcalc(value)
+    setresult(value)
+  }
+
+  const calculate = () => {
+    setcalc(result)
   }
 
   const creatDigits = () => {
@@ -36,13 +62,13 @@ function App() {
           <button onClick={() => updateCalc('+')}>+</button>
           <button onClick={() => updateCalc('-')}>-</button>
 
-          <button>del</button>
+          <button onClick={()=> delLast()}>del</button>
         </div>
         <div className="degitis">
           {creatDigits()}
           <button onClick={() => updateCalc('0')}>0</button>
           <button onClick={() => updateCalc('.')}>.</button>
-          <button>=</button>
+          <button onClick={()=> calculate()}>=</button>
         </div>
       </div>
     </div>
