@@ -7,4 +7,76 @@
 
 body{
   font-family: 'Poppins', sans-serif;
+  background: #41295a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 500;
+  background-color: transparent;
+  color: #fff;
+  transition: 0.4s;
+}
+
+button:hover{
+  background-color: #ffffff28;
+}
+
+.app{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #654E92;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 6px #ffffff5b;
+}
+
+.display{
+  padding: 20px 20px;
+  color: #fff;
+  font-size: 35px;
+  width: 100%;
+  text-align: right;
+}
+
+.display span{
+  font-size: 19px;
+}
+
+.operators{
+  width: 100%;
+  background-color: #3A1078;
+  display: flex;
+  align-items: center;
+}
+
+.operators button{
+  flex: 1;
+}
+
+.degitis{
+  display: flex;
+  flex-wrap: wrap;
+}
+.degitis button{
+  padding: 18px 10px;
+  flex-basis: 30%;
+  flex-grow: 1;
 }
